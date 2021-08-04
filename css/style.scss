@@ -1,0 +1,319 @@
+@import'./head';
+
+*{
+    box-sizing: border-box;
+}
+body{
+    padding: 0;
+    margin: 0;
+
+    // font-family: 'Oswald', sans-serif;
+    // font-family: 'Style Script', cursive;
+    font-family: 'Teko', sans-serif;
+
+}
+
+.hr1{
+    border: red dotted 10px;
+    border-bottom: none;
+    text-align: center;
+    width: 80px;
+}
+
+[class*="col-"]{
+    width: 100%;
+}
+
+.container{
+    
+
+    header{
+        background-color: #33FFBD;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+
+        .logo{
+            text-align: center;
+
+            img{
+                width: 50px;
+                &:hover{
+                    width: 55px;
+                }
+            }
+           
+        }
+
+        .title{
+            text-align: center;
+            h2{
+                font-family: 'Style Script', cursive;
+                color: tomato;
+                font-weight: bold;
+                cursor: pointer;
+                
+
+                &:hover{
+                    font-size: calc(100% + 55%);
+                    
+                }
+            }
+        }
+
+
+        .nav{
+
+            display: flex;
+            flex-direction: column;
+            
+            a{
+                
+                background-color: black;
+                margin: 7px;
+                padding: 13px;
+                text-align: center;
+                text-decoration: none;
+                color: white;
+                border-radius: 8px;
+                font-weight: bold;
+
+               
+
+                &:hover{
+                    background-color: gray;
+                    color: black
+                }
+
+
+            }
+            .contact{
+                background-color: transparent;
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                
+                .sub{
+                    position: absolute;
+                    top: 45px;
+                    left: 250px;
+                    display: flex;
+                    flex-direction: column;
+                    a{
+                        margin: 0;
+                        border-radius: 0;
+                        display:none;
+                    }
+            
+                }
+                &:hover .sub a{
+                    
+                    display: block;
+                }
+
+            }
+            
+        }
+    }
+
+
+    main{
+        background-attachment: fixed;
+        background-image: url("./image/cover1.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 100vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .title{
+            text-align: center;
+            
+            h1{
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-family: 'Style Script', cursive;
+                font-size: 40px;
+                background-color: yellow;
+                min-width: 400px;
+                height: 27vh;
+                opacity: .7;
+                border-radius: 0% 50px;
+
+                &:hover{
+                    width: calc(100% + 1%);
+                    box-shadow: 0 4px 8px 0px rgb(0, 0, 0);
+                }
+
+            }
+
+           
+
+            
+        }
+
+        .disc{
+
+
+            h3{
+                text-align: center;
+                min-width: 400px;
+                background-color: rgb(0, 0, 0);
+                padding: 15px 0;
+                color: white;
+
+                &:hover{
+                    color: red;
+                }
+            }
+        }
+
+        .butt{
+
+            
+
+            button{
+                    
+                background-color: red;
+                a{
+                    font-size: 25px;
+                    color: black;
+                    font-weight: bold;
+                    text-decoration: none;
+
+                        
+                }
+                &:hover{
+                    background-color: black;
+                    a{
+                        color: aliceblue
+                    }
+                            
+                }
+            }
+         }
+        
+        
+
+    }
+
+    .about{
+
+        padding: 10px 30px;
+        .title{
+            text-align: center
+        }
+
+        
+
+        .detail{
+            text-align: justify
+        }
+
+        &::after{
+            content: '';
+            clear: both;
+            display: table
+        }
+    }
+
+ 
+
+    .card{
+
+        margin: 0 5%;
+        
+        .card1{
+            
+            display: flex;
+                justify-content: center;
+                align-items: center;
+
+            .crd{
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                margin: 7px 0;
+                width: 250px;
+                
+                text-align: center;
+                .card-photo{
+                    width: 100%;
+                    
+                    img{
+                        width: 100%;
+                        height: 180px;
+                        display: block;
+                    }
+                }
+
+                .card-head{
+                    color: white;
+                    background-color: rgb(39, 56, 39);
+                    width: 100%;
+                }
+
+                .card-body{
+                    background-color: gray;
+                    width: 100%;
+                }
+
+                &:hover{
+                    width: 255px;
+                    box-shadow: 0 5px 8px 0 black;
+                }
+            }
+
+
+    
+            
+        }
+
+        &::after{
+            content: '';
+            clear: both;
+            display: table
+        }
+
+    }
+
+
+    .contact-sec{
+        background-color: gray;
+        text-align: center
+    }
+
+
+    footer{
+        
+        color: white;
+        background-color: rgb(0, 0, 0);
+        padding: 10px;
+        .copyright{
+            p{
+                text-align: center;
+            }
+        }
+        
+
+        &::after{
+            content: '';
+            clear: both;
+            display: table;
+        }
+    }
+    
+}
+
+
+
+@import'./tab-style';
+@import'./pc-style';
